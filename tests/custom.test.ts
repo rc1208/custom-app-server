@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import Point from '../customClass';
+import Point from '../src/customClass';
 
 
 describe('Point', () => {
