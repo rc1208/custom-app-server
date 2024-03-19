@@ -1,7 +1,7 @@
 
 // Import the express in typescript file
 import express from 'express';
-import Point from './customClass';
+
 // mongo code
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
@@ -19,8 +19,6 @@ database.once('connected', () => {
     console.log('Database Connected');
 })
 
-let point = new Point(4,5);
-console.log('point-->' + point.add());
 // Initialize the express engine
 const app: express.Application = express();
 
@@ -35,7 +33,7 @@ app.get('/', (_req, _res) => {
 
 // Server setup
 app.listen(port, () => {
-    console.log(`TypeScript with Express 
+    console.log(`Server running on 
          http://localhost:${port}/`);
 });
 
