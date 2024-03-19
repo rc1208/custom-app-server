@@ -22,14 +22,11 @@ database.once('connected', () => {
 // Initialize the express engine
 const app: express.Application = express();
 
-// Take a port 8080 for running server.
 const port: number = 8080;
 
-
-// Handling '/' Request
-app.get('/', (_req, _res) => {
-    _res.send("TypeScript With Express");
-});
+app.get('/health', (request, response) => {
+    response.status(200).send('Health check OK');
+})
 
 // Server setup
 app.listen(port, () => {
